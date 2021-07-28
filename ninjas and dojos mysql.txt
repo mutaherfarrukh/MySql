@@ -1,0 +1,117 @@
+Create a .txt file where you'll save each of your queries from below
+CREATED
+==============================
+Query: Create 3 new dojos
+
+select * from dojo;
+-- INSERT INTO dojo (id , name, created_at, updated_at) 
+-- VALUES(1, 'superNinja', now(), now());
+
+-- INSERT INTO dojo (id , name, created_at, updated_at) 
+-- VALUES(2, 'yolo', now(), now());
+
+-- INSERT INTO dojo (id , name, created_at, updated_at) 
+-- VALUES(3, 'Beth', now(), now());
+
+-- select * from dojo;
+
+====================================
+
+Query: Delete the 3 dojos you just created
+
+DELETE FROM ninja WHERE id = 1;
+DELETE FROM ninja WHERE id = 2;
+DELETE FROM ninja WHERE id = 3;
+=====================================
+Query: Create 3 more dojos
+
+-- INSERT INTO dojo (id , name, created_at, updated_at) 
+-- VALUES(4, 'TonyBlake', now(), now());
+
+-- INSERT INTO dojo (id , name, created_at, updated_at) 
+-- VALUES(5, 'LeslieTR', now(), now());
+
+-- INSERT INTO dojo (id , name, created_at, updated_at) 
+-- VALUES(6, 'RobChoate', now(), now());
+
+
+======================================
+
+Query: Create 3 ninjas that belong to the first dojo
+
+INSERT INTO ninja (id , first_name, last_name, age, created_at, updated_at, dojo_id)
+values( 1, "Nick", "Pit", 12, now(), now(),1);
+
+INSERT INTO ninja (id , first_name, last_name, age, created_at, updated_at, dojo_id)
+values( 2, "John", "Wick", 32, now(), now(),1);
+
+INSERT INTO ninja (id , first_name, last_name, age, created_at, updated_at, dojo_id)
+values( 3, "Santa", "Claus", 87, now(), now(),1);
+
+select * from ninja;
+
+=======================================
+
+Query: Create 3 ninjas that belong to the second dojo
+
+INSERT INTO ninja (id , first_name, last_name, age, created_at, updated_at, dojo_id)
+values( 7, "Nick", "Pit", 19, now(), now(),2);
+
+INSERT INTO ninja (id , first_name, last_name, age, created_at, updated_at, dojo_id)
+values( 8, "John", "Wick", 12, now(), now(),2);
+
+INSERT INTO ninja (id , first_name, last_name, age, created_at, updated_at, dojo_id)
+values( 9, "Santa", "Claus", 77, now(), now(),2);
+
+select * from ninja;
+
+===============================================
+Query: Create 3 ninjas that belong to the third dojo
+
+
+INSERT INTO ninja (id , first_name, last_name, age, created_at, updated_at, dojo_id)
+values( 10, "Patrick", "Brave", 62, now(), now(),3);
+
+INSERT INTO ninja (id , first_name, last_name, age, created_at, updated_at, dojo_id)
+values( 11, "Justin", "Slick", 52, now(), now(),3);
+
+INSERT INTO ninja (id , first_name, last_name, age, created_at, updated_at, dojo_id)
+values( 12, "Brianna", "Jef", 8, now(), now(),3);
+
+select * from ninja;
+
+===============================================
+Query: Retrieve all the ninjas from the first dojo
+
+select * from ninja where dojo_id = 2;
+================================================
+
+Query: Retrieve all the ninjas from the last dojo
+
+select * from ninja where dojo_id = 3;
+
+=================================================
+
+Query: Retrieve the last ninja's dojo
+
+select * from ninja where id = 12 and dojo_id = 3; 
+
+=================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
